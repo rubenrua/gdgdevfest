@@ -7,3 +7,23 @@ item {
   id: 2
   name: 'Tarbosaurus'
 }
+
+item {
+  id: 3
+  name: 'Parasaurolophus'
+}
+
+item {
+  id: 4
+  name: 'Velociraptor'
+}
+
+item {
+  id: 5
+  name: 'Stegosaurus'
+}
+
+item {
+  id: 6
+  name: 'Diplodocus'
+}
