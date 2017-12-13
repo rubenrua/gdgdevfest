@@ -184,43 +184,15 @@ We can run:
 jupyter notebook
 ```
 
-And navigate to the notebooks folder. There we can open `explore_model.ipynb` to we can load a model and explore how it generates predictions and process some test images.
+And open `explore_model.ipynb` to we can load a model and explore how it generates predictions and process some test images.
 
-## b)  Process Images
-
-We can process a folder of images (`--input`) and save the corresponding images with the predicted boxes drawn in another folder (`--output`):
-
-
-```bash
-python object_detection/process_folder.py \
---model jobs/sample_job/train_out/ssd_mobilenet_v1/exported_graph/frozen_inference_graph.pb \
---input test_images \
---output test_images_processed \
---labels jobs/sample_job/data/label_map.pbtxt \
---n_classes 2
-```
-
-## c)  Process Video
-
-We can process a video (`--input`) and generate a new video (`--output`) where each frame has the predicted boxes drawn:
-
-
-```bash
-python object_detection/process_video.py \
---model jobs/sample_job/train_out/ssd_mobilenet_v1/exported_graph/frozen_inference_graph.pb \
---input our_video.mp4 \
---output "our_video_processed.avi" \
---labels jobs/sample_job/data/label_map.pbtxt \
---n_classes 2
-```
-
-## d)  Process Webcam
+## b)  Process Webcam
 
 We can process a video stream coming from a webcam and visualize the output:
 
 ```bash
 python object_detection/process_webcam.py \
---model pretrained/ssd_mobilenet_v1_coco_11_06_2017/frozen_inference_graph.pb \
---labels object_detection/data/mscoco_label_map.pbtxt \
---n_classes 90
+--model jobs/sample_job/train_out/ssd_mobilenet_v1/exported_graph/frozen_inference_graph.pb \
+--labels jobs/sample_job/data/label_map.pbtxt \
+--n_classes 5
 ```
