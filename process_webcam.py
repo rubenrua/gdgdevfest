@@ -60,7 +60,7 @@ with detection_graph.as_default():
         while True:
             ret, frame = cap.read()
 
-            image_np_expanded = np.expand_dims(frame, axis=0)
+            image_np_expanded = np.expand_dims(frame[:,:,::-1], axis=0)
 
             (boxes, scores, classes) = sess.run(
                 [detection_boxes, detection_scores, detection_classes],
